@@ -29,7 +29,7 @@ func resourceToken() *schema.Resource {
 
 func resourceTokenSet(d *schema.ResourceData, meta interface{}) error {
 	url := meta.(string)
-	size := d.Get("key")
+	size := d.Get("size")
 
 	if size != nil {
 		url += fmt.Sprintf("?size=%d", size.(int))
